@@ -1,0 +1,46 @@
+# The python packages necessary to run ProjectZeroWaste > Classifiers (fastai)
+#
+# Install: conda env create -f fastai-env.yaml
+# Update:  conda env update -f fastai-env.yaml --prune
+# Remove: conda env remove -n fastai
+
+name: fastai
+# in order of priority: lowest (top) to highest (bottom)
+channels:
+  - fastai
+  - conda-forge
+  - default
+dependencies:
+  - python==3.6.10 # the latest python release running on dev machine
+  - cython # wrapping Python around C. C is fast.
+  - pillow==7.2.0 # classic fork of Python Imaging Library 
+  - numpy==1.18.4 # essential math and matrix operations
+  - tensorflow-gpu==1.15.0 # or tensorflow-gpu if you have a GPU
+  - tensorboard==1.15.0
+  - keras==2.2.4 # deep learning library (keras==2.2.4)
+  - keras-applications==1.0.8 # pre-trained weights architectures for VGG* ResNet*
+  - keras-preprocessing # data preprocessing and data augmentation module (1.1.2)
+  - pandas==1.1.2 # working with tabulated data  
+  - pip # THE python package manager
+  - matplotlib==3.2.1 # classic plotting  
+  - scikit-image==0.16.2 # image processing https://scikit-image.org/docs/stable/install.html
+  - imageio=2.9.0
+  - tqdm # popular progress bar for jupyter
+  - scipy==1.3.0 # numerical methods
+  - jupyter # great tool for any python project.
+  - nb_conda_kernels
+  - ipykernel
+  - requests
+  - pyyaml
+  - seaborn
+  - scikit-learn
+  - pip:
+    - opencv-python==3.4.3.18
+    - efficientnet-pytorch==0.7.0
+    - fastai==1.0.61
+    #- fastai==2.1.7
+    - argparse
+    - pylint  # vscode
+    - imgaug
+    - timm
+    - albumentations
